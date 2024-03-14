@@ -1,0 +1,89 @@
+section.banner{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/faq_banner.jpg?v=1704349635')no-repeat center center/cover;
+}
+section.banner .content *{
+    color: white;
+    text-align: center;
+}
+section.banner .content{
+    max-width: 807px;
+    padding: 97px 0;
+}
+section.banner h1{
+    margin-bottom: 20px;
+}
+
+
+
+section.faq h2{
+    margin-bottom: 50px;
+}
+section.faq span.q{
+    color: var(--Yellow, #EBB035);
+    text-align: center;
+    font-family: 'Manrope',sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+section.faq span.a{
+    color: #2B29299E;
+    text-align: center;
+    font-family: 'Manrope',sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 15px;
+}
+section.faq h2.accordion-header{
+    background-color: #F8F8F8 !important;
+    border-left: 3px solid #EBB035;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    margin-bottom: 0    ;
+}
+section.faq button.accordion-button{
+    background-color: transparent !important;
+    padding: 0;
+    border: none !important;
+    box-shadow: none !important;
+    color: var(--Dark, #2B2929);
+    text-align: center;
+    font-family: 'Manrope',sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+section.faq div#accordionExample,
+section.faq div#accordionExample1{
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+section.faq .accordion-button:not(.collapsed)::after{
+    background-image: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/minus.png?v=1704350450');
+    width: 25px;
+    height: 25px;
+}
+section.faq .accordion-button::after{
+    background-image: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/plus.png?v=1704349634');
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+    background-position: center;
+}
+section.faq .accordion-body{
+    background-color: #F8F8F8 !important;
+    border-left: 3px solid #2B29299E;
+    padding: 13px 15px;
+    display: flex;
+}
+section.faq .accordion-item{
+    border-radius: 7px;
+    overflow: hidden;
+}

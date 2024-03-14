@@ -1,0 +1,71 @@
+.container--compact .modal-content {
+    padding: 47px 53px;
+    border-radius: 15px;
+    background: #FFF;
+}
+
+span.text-size--xlarge.text-weight--bold {
+    color: var(--Dark, #2B2929);
+
+    /* h3 */
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+button.button.button--outline.button--regular {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #EBB035;
+    background: #EBB035;
+    color: var(--Text, #2B2929);
+    text-align: center;
+
+    /* CTA */
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.account input:not([type=checkbox]) {
+    width: 100%;
+    padding: 16px 13px;
+    border-radius: 5px;
+    border: 1px solid rgba(43, 41, 41, 0.30);
+    background: #FFF;
+}
+
+html[dir=ltr] select {
+    padding: 16px 13px;
+    border-radius: 5px;
+    border: 1px solid rgba(43, 41, 41, 0.30);
+}
+
+.account__form-row {
+    padding-bottom: 0;
+}
+
+form#address_form_new,
+form.account {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.account input:not([type=checkbox])::placeholder{
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 156.25% */
+}
+
+.account__form-row.account__form-row--flex div{
+    width: 50%;
+}

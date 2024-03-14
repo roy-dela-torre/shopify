@@ -1,0 +1,287 @@
+section.single-post .main_content {
+    max-width: 770px;
+    margin-bottom: 50px;
+}
+
+section.single-post h1 {
+    margin-bottom: 20px;
+}
+
+section.single-post .main_content p.date {
+    color: rgba(43, 41, 41, 0.60);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 0;
+}
+
+section.single-post .main_content img {
+    margin: 30px 0 10px 0;
+}
+
+section.single-post .main_content p img+*,
+section.single-post .main_content img {
+    margin-bottom: 30px;
+}
+
+section.single-post .main_content p:has(img) {
+    margin-bottom: 0;
+}
+
+section.single-post .main_content img {
+    max-height: 400px;
+}
+
+section.single-post .singleContent {
+    margin-bottom: 50px;
+}
+
+section.single-post .share-social-media span {
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 20px;
+    width: fit-content;
+}
+
+section.single-post .share-social-media img {
+    margin: 0;
+}
+
+section.single-post .share-social-media>div>div {
+    gap: 0 10px;
+    align-items: center;
+}
+
+section.single-post .share-social-media>div {
+    align-items: center;
+    gap: 0 10px;
+}
+
+section.single-post .main_content a {
+    color: var(--Yellow, #EBB035);
+    font-family: 'Manrope',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    text-decoration: none;
+}
+
+section.single-post .more-blogs .content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+
+section.single-post .more-blogs .content img {
+    max-width: 126px;
+    margin: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.single-post .more-blogs .blogsPostContent {
+    max-width: 310px;
+}
+
+section.single-post .more-blogs .row {
+    gap: 40px 0;
+}
+
+
+section.single-post .moreBlogsContent {
+    width: 38%;
+}
+
+section.single-post .featureImg img {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+section.single-post .more-blogs a {
+    color: #2B2929;
+    text-decoration: none;
+}
+
+section.single-post .row {
+    gap: 40px 0;
+}
+
+section.single-post .more-blogs .viewCollection .content {
+    max-width: 322px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.single-post .more-blogs .viewCollection .content a {
+    padding: 11px 15px;
+    text-align: center;
+    border-radius: 7px;
+    color: var(--Dark, #2B2929);
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    background-color: white;
+}
+
+section.single-post .more-blogs .viewCollection .content h3,
+section.single-post .more-blogs .viewCollection .content p {
+    color: white;
+}
+
+section.single-post .more-blogs .viewCollection .content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+section.single-post .more-blogs .viewCollection .content p {
+    margin-bottom: 30px;
+}
+
+section.single-post img {
+    object-fit: cover;
+}
+
+
+section.single-post .view_collection {
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/view_collection_bg.jpg?v=1706604202')no-repeat center center/cover;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 460px;
+    min-height: 350px;
+    margin-bottom: 35px;
+}
+
+section.single-post .collection_container {
+    max-width: 322px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.single-post .collection_container h3 {
+    margin-bottom: 20px;
+}
+
+section.single-post .collection_container p {
+    margin-bottom: 30px;
+}
+
+section.single-post .collection_container a {
+    padding: 11px 30px;
+    border-radius: 7px;
+    background: var(--Light, #FFF);
+    color: var(--Dark, #2B2929);
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+section.single-post .content {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+}
+
+section.single-post .content .featured_image {
+    width: calc(40% - 12px);
+}
+
+section.single-post .content .featured_image img {
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    max-height: 126px;
+    max-width: 100%;
+}
+
+section.single-post .more_article_content {
+    max-width: 310px;
+    width: calc(60% - 12px);
+}
+
+section.single-post .content:not(:last-child) {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 1200px) {
+    section.single-post .content {
+        flex-direction: column;
+        gap: 24px 0;
+    }
+
+    section.single-post .content>* {
+        width: 100% !important;
+    }
+
+    section.single-post .content img {
+        max-height: 300px !important;
+    }
+}
+
+@media (max-width:991px) {
+    section.single-post .row>div {
+        width: 100%;
+    }
+
+    section.single-post .main_content,
+    section.single-post .view_collection {
+        max-width: 100%;
+    }
+
+    section.single-post .more-blogs .blog-post-img {
+        max-width: fit-content;
+    }
+
+    section.single-post .content {
+        padding-left: 0;
+        align-items: start;
+    }
+
+    section.single-post .content img {
+        max-height: 400px !important;
+    }
+}
+
+@media (max-width: 575px) {
+
+    section.single-post .more-blogs .content img,
+    section.single-post .more-blogs .blogsPostContent {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    section.single-post .content img {
+        max-height: 200px !important;
+    }
+
+    section.single-post .more-blogs .content {
+        flex-direction: column;
+    }
+
+    section.single-post .more-blogs .blog-post-img {
+        width: 100% !important;
+        max-height: 250px;
+        max-width: 100%;
+    }
+}

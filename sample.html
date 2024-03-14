@@ -1,0 +1,42 @@
+{% if template == 'product' and request.path == '/products/testing-product' %}
+  <link rel="stylesheet" href="{{ 'single_product.css' | asset_url }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('div#shopify-block-0d317a42-4873-4348-8269-2e2bc9740e7c').hide();
+      function reloadWithVariant(variantId) {
+        var url = window.location.href + "?variant=" + variantId;
+        window.location.href = url;
+      }
+    
+      var variantIds = [];
+      meta.product.variants.forEach(function(variant) {
+        variantIds.push(variant.id);
+      });
+      console.log(variantIds)
+      if (variantIds.length == 2) {
+        $('<div class="group_button d-none">' +
+          '<button class="engraving">Engraving</button>' +
+          '<button class="bottle_only">Bottle Only</button>' +
+          '</div>').insertAfter('div#shopify-block-0d317a42-4873-4348-8269-2e2bc9740e7c');
+      }
+    
+      // Button click event listeners
+      $('.bottle_only').on('click', function() {
+        reloadWithVariant(variantIds[0]); // Variant ID for "Bottle Only"
+      });
+    
+      $('.engraving').on('click', function() {
+        reloadWithVariant(variantIds[1]); // Variant ID for "Engraving"
+      });
+    });
+  </script>
+{% endif %}
+
+
+
+{% if template == 'product' and request.path == '/products/testing-product' %}
+  <div data-js-product-price-extended >
+    {%- render 'product-price', variant: current_variant, target: current_variant, text_size_class: 'text-size--heading', show_saving: true -%}
+  </div>
+{% endif %}

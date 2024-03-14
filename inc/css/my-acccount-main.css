@@ -1,0 +1,50 @@
+a.button.button--outline.button--small {
+    padding: 16px 19px;
+    border-radius: 7px;
+    background: var(--Yellow, #EBB035);
+    color: var(--Light, #FFF);
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+.thead,
+.account-widget__head {
+    height: auto !important;
+    padding: 30px 31px;
+    border-radius: 15px 15px 0px 0px;
+    background-color: var(--Dark, #2B2929) !important;
+}
+
+.thead span.th,
+.account-widget__head span {
+    color: var(--Light, #FFF);
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.account-table .td span {
+    color: #000;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.account-widget__body p {
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+}

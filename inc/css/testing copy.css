@@ -1,0 +1,98 @@
+section.product_grid_collection form#FacetFiltersForm {
+    flex-direction: column;
+}
+
+section.product_grid_collection .facets__prewrapper {
+    max-width: 100%;
+    width: 100%;
+}
+
+section.product_grid_collection details.disclosure-has-popup.facets__disclosure.js-filter {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+section.product_grid_collection select#desktop-SortBy {
+    max-width: 100%;
+    width: 100%;
+    padding: 17px 18px;
+    border-radius: 5px;
+    border: 1px solid rgba(43, 41, 41, 0.30);
+    background: var(--Dark, #2B2929);
+    color: #FFF;
+    font-family: "DIN Next W1G",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 168.75% */
+}
+
+section.product_grid_collection summary.facets__summary {
+    border: none;
+}
+
+html[dir=ltr] .disclosure-has-popup[open]>summary:before {
+    display: none;
+}
+
+section.product_grid_collection .facets__display.body-text-sm {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #F1F1F1;
+}
+section.product_grid_collection.details.disclosure-has-popup.facets__disclosure.js-filter::-webkit-scrollbar-thum {
+    display: none;
+}
+
+
+
+section.product_grid_collection div#main-collection-product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+section.product_grid_collection div#main-collection-product-grid>div {
+    width: calc(33.33% - 17px);
+}
+
+section.product_grid_collection option {
+    padding: 10px;
+    color: #FFF;
+
+/* Brand */
+    font-family: "DIN Next W1G",sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 168.75% */
+}
+
+@media (max-width:1200px) {
+    section.product_grid_collection div#main-collection-product-grid>div {
+        width: calc(33.33% - 17px);
+    }
+    section.product_grid_collection{
+        padding: 0;
+    }
+}
+@media (max-width:1200px) {
+    section.product_grid_collection div#main-collection-product-grid>div {
+        width: calc(50% - 13px);
+    }
+}
+@media (max-width:767px) {
+    section.product_grid_collection{
+        padding: 0;
+    }
+}
+@media (max-width:575px) {
+    section.product_grid_collection div#main-collection-product-grid>div {
+        width: 100%;
+    }
+}

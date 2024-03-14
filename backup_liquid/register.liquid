@@ -1,0 +1,66 @@
+{% section 'header-new' %}
+<link rel="stylesheet" href="{{ 'account.css' | asset_url }}">
+<section class="account p-0">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="offset-xxl-1 col-xxl-5 col-lg-6 col-md-12">
+                <div class="login_form">
+                    <div class="header">
+                        <h1>Customer Login</h1>
+                        <p>Welcome back! Let's continue your spirited journey — log in now.</p>
+                    </div>
+                    <div class="account__form-block gutter-top--large">
+                        {% form 'create_customer', class: 'simple-form' %}
+                            {% render 'form-errors', form: form %}
+                            <div class="account__form-row">
+                                <label for="first_name" class="hidden">{{ 'customers.register_page.form.first_name_label' | t }}</label>
+                                <input type="text" value="" name="customer[first_name]" id="first_name" placeholder="{{ 'customers.register_page.form.first_name_label' | t }}" {% if form.errors contains "first_name" %} class="error"{% endif %} autocapitalize="words" autofocus>
+                            </div>
+                            
+                            <div class="account__form-row">
+                                <label for="last_name" class="hidden">{{ 'customers.register_page.form.last_name_label' | t }}</label>
+                                <input type="text" value="" name="customer[last_name]" id="last_name" placeholder="{{ 'customers.register_page.form.last_name_label' | t }}" {% if form.errors contains "last_name" %} class="error"{% endif %} autocapitalize="words">
+                            </div>
+                
+                            <div class="account__form-row">
+                                <label for="email" class="hidden">{{ 'customers.register_page.form.email_label' | t }}</label>
+                                <input type="email" value="" name="customer[email]" id="email" placeholder="{{ 'customers.register_page.form.email_label' | t }}" {% if form.errors contains "email" %} class="error"{% endif %} autocorrect="off" autocapitalize="off">
+                            </div>
+                
+                            <div class="account__form-row">
+                                <label for="password" class="hidden">{{ 'customers.register_page.form.password_label' | t }}</label>
+                                <input type="password" value="" name="customer[password]" id="create_password" placeholder="{{ 'customers.register_page.form.password_label' | t }}" {% if form.errors contains "password" %} class="error"{% endif %}>
+                            </div>
+                
+                            <div class="account__form-row form-actions">
+                                <input class="button button--solid button--regular" type="submit" value="{{ 'customers.register_page.form.submit_button' | t }}">
+                            </div>
+                            
+                            <div class="account__form-row text-size--small">
+                                {{ 'customers.register_page.login_text' | t }} <a href="{{ routes.account_login_url }}">{{ 'customers.login_page.form_login_button' | t }}</a>
+                            </div>
+                        {% endform %}
+                    </div>
+                    <div id="login_with_socmed" class="continue_withd d-none">
+                        <div class="sl-vertical social-wrap oxi_icon_center" style="padding-left:0px;">
+                            <a class="social_login facebook" url="/auth/facebook?shop=flaskedph.myshopify.com&amp;parenturl=https://www.flasked.ph/pages/register" href="/auth/facebook?shop=flaskedph.myshopify.com&amp;parenturl=https://www.flasked.ph/pages/register" aria-label="Facebook">
+                                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/facebook_dbf6e7be-e2f7-43be-a02c-9094dff5fecc.png?v=1706778676" alt="">
+                                <span>Sign in with Facebook</span>
+                            </a>
+                            <a class="social_login google" url="/auth/google?shop=flaskedph.myshopify.com&amp;parenturl=https://www.flasked.ph/pages/register" href="/auth/google?shop=flaskedph.myshopify.com&amp;parenturl=https://www.flasked.ph/pages/register" aria-label="Google">
+                                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/google.png?v=1706778676" alt="">
+                                <span>Sign in with Google</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="image">
+                    <img src="https://mau3mijc6kdp3btc-55985537202.shopifypreview.com/cdn/shop/files/account_bg.jpg?v=1706688396" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% section 'footer-new' %}

@@ -1,0 +1,295 @@
+.breadcrumb-main {
+    display: none
+}
+
+.card .button {
+    width: 100%;
+    max-width: 100%
+}
+
+div#CollectionProductGrid .container--large {
+    padding: 0!important
+}
+
+.container--vertical-space .container--large {
+    padding: 0
+}
+
+.container--vertical-space-small {
+    padding: 100px 5% 0
+}
+
+section.banner .bg {
+    background: url('https://www.flasked.ph/cdn/shop/files/The_Best_Liquor_for_Gifts_in_the_Philippines.jpg?v=1702961100')no-repeat center center/cover;
+    padding: 119px 30px;
+    border-radius: 15px;
+    max-width: calc(100% - 24px);
+    margin: 0 auto 127px
+}
+
+section.banner .content {
+    max-width: 860px;
+    margin: 0 auto
+}
+
+section.banner .bg h2,section.banner .bg p {
+    color: #fff;
+    text-align: center
+}
+
+section.banner .bg .p_content {
+    max-width: 801px;
+    margin: 0 auto 16px
+}
+
+section.banner h2 {
+    margin-bottom: 30px
+}
+
+section.banner .img {
+    max-width: 732px
+}
+
+section.banner .left_content {
+    max-width: 576px;
+    padding-left: 5%
+}
+
+section.banner .row:first-child {
+    margin-bottom: 50px;
+    align-items: center
+}
+
+section.banner h2 {
+    margin-bottom: 20px
+}
+
+section.banner .left_content img {
+    margin-bottom: 30px
+}
+
+section.banner .row:last-child {
+    gap: 24px 0
+}
+
+section.banner .row:last-child .content {
+    padding: 45px;
+    border-radius: 15px;
+    border: 1.5px solid #2B2929;
+    height: 100%
+}
+
+section.banner .row:last-child .content img {
+    max-width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px
+}
+
+section.banner .row:last-child .content h3 {
+    margin-bottom: 20px
+}
+
+section.banner .row:last-child .content a {
+    color: var(--Yellow, #EBB035);
+    font-family: Manrope,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px
+}
+
+section.best_gift_sets {
+    background: url('https://www.flasked.ph/cdn/shop/files/Best_Gift_Sets_to_Grab_from_Flasked.jpg?v=1702961101')no-repeat center center/cover
+}
+
+section.best_gift_sets .header .content_header {
+    max-width: 803px;
+    margin: 0 auto
+}
+
+section.best_gift_sets .header .content_header * {
+    text-align: center
+}
+
+section.best_gift_sets .col-lg-6:nth-child(2n)>div {
+    max-width: 576px
+}
+
+section.best_gift_sets .col-lg-6:nth-child(odd)>div {
+    max-width: 600px;
+    padding-left: 5%
+}
+
+section.best_gift_sets .row {
+    gap: 48px 0;
+    align-items: center
+}
+
+section.best_gift_sets a {
+    color: var(--Yellow, #EBB035);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px
+}
+
+section.best_gift_sets .content {
+    position: relative;
+    top: 50px
+}
+
+section.best_gift_sets h3 {
+    margin-bottom: 20px
+}
+
+section.getting_liqour .row:first-child {
+    margin-bottom: 50px;
+    align-items: center
+}
+
+section.getting_liqour .left_content {
+    padding-left: 5%
+}
+
+section.getting_liqour .left_content img {
+    margin-bottom: 30px
+}
+
+section.getting_liqour .content {
+    padding: 45px;
+    border-radius: 15px;
+    border: 1.5px solid #2B2929;
+    height: 100%
+}
+
+section.getting_liqour .content img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px
+}
+
+section.getting_liqour h2,section.getting_liqour h3 {
+    margin-bottom: 20px
+}
+
+section.getting_liqour .row:last-child {
+    gap: 24px 0
+}
+
+section.why_flasked_has_the_best_liqoue {
+    background-color: #f4f4f4
+}
+
+section.why_flasked_has_the_best_liqoue .header_content {
+    max-width: 786px;
+    margin: 0 auto 26px
+}
+
+section.why_flasked_has_the_best_liqoue .header_content * {
+    text-align: center
+}
+
+section.why_flasked_has_the_best_liqoue .row {
+    gap: 24px 0
+}
+
+section.why_flasked_has_the_best_liqoue .content {
+    padding: 45px;
+    border-radius: 15px;
+    border: 1.5px solid #2B2929;
+    height: 100%
+}
+
+section.why_flasked_has_the_best_liqoue img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px
+}
+
+section.why_flasked_has_the_best_liqoue h3,section.why_flasked_has_the_best_liqoue h2 {
+    margin-bottom: 20px
+}
+
+section.why_flasked_has_the_best_liqoue h2 {
+    max-width: 600px;
+    margin: 0 auto 20px
+}
+
+section.discover_the_finset .bg {
+    background: url('https://www.flasked.ph/cdn/shop/files/Discover_the_finest_liquor_gifts_in_the_Philippines_and_add_them_to_your_cart_exclusively_on_Flasked.jpg?v=1702961101')no-repeat center center/cover;
+    padding: 100px 30px;
+    border-radius: 15px;
+    max-width: calc(100% - 24px);
+    margin: 0 auto
+}
+
+section.discover_the_finset h2,section.discover_the_finset p {
+    text-align: center;
+    color: #fff
+}
+
+section.discover_the_finset h2 {
+    margin-bottom: 20px
+}
+
+section.discover_the_finset .content {
+    max-width: 717px;
+    margin: 0 auto
+}
+
+@media (max-width: 1200px) {
+    section.banner .bg {
+        padding:70px 30px;
+        margin-bottom: 70px
+    }
+
+    section.banner .row:first-child {
+        margin-bottom: 70px
+    }
+}
+
+@media (max-width: 991px) {
+    section.banner .left_content,section.best_gift_sets .col-lg-6>div,section.getting_liqour .left_content {
+        max-width:100%!important;
+        padding: 0!important
+    }
+
+    section.best_gift_sets .col-lg-6>div img {
+        max-width: 100%;
+        margin: 0 auto 30px;
+        background-color: #fff;
+        border-radius: 15px
+    }
+
+    section.best_gift_sets .content {
+        position: relative;
+        top: 00px
+    }
+
+    section.banner .row:first-child {
+        margin-bottom: 50px
+    }
+}
+
+@media (max-width: 767px) {
+    section.banner .content *,section.best_gift_sets .header .content_header *,section.why_flasked_has_the_best_liqoue .header_content *,section.discover_the_finset .content * {
+        text-align:left!important
+    }
+
+    section.banner .row:last-child .content,section.getting_liqour .content,section.why_flasked_has_the_best_liqoue .content {
+        padding: 25px
+    }
+}
+
+@media (max-width: 575px) {
+    section.banner .bg {
+        padding:50px 30px;
+        margin-bottom: 50px
+    }
+
+    section.banner h2 {
+        font-size: 20px!important
+    }
+}

@@ -1,0 +1,171 @@
+section.banner .bg{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/A_Wide_Range_of_Johnie_Walker_for_Sale_in_the_Philippines.jpg?v=1704270096')no-repeat center center/cover;
+    padding: 119px 30px;
+    border-radius: 15px;
+    max-width: calc(100% - 24px);
+    margin: 0 auto 127px auto;
+}
+section.banner .content{
+    max-width: 860px;
+    margin: 0 auto;
+}
+section.banner .bg h1,
+section.banner .bg p{
+    color: #FFFFFF;
+    text-align: center;
+}
+section.banner .bg .p_content{
+    max-width: 801px;
+    margin: 0 auto 16px auto;
+}
+section.banner h1{
+    margin-bottom: 30px;
+}
+section.banner .img{
+    max-width: 732px;
+}
+section.banner .left_content{
+    max-width: 576px;
+    padding-left: 5%;
+}
+section.banner .row:first-child{
+    align-items: center;
+}
+section.banner h2{
+    margin-bottom: 20px;
+}
+section.banner .left_content img{
+    margin-bottom: 30px;
+}
+
+
+
+section.the_best_jhony_walker{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/Best_Gift_Sets_to_Grab_from_Flasked.jpg?v=1702961101')no-repeat center center/cover;
+}
+section.the_best_jhony_walker .header .content_header{
+    max-width: 803px;
+    margin: 0 auto 0 auto;
+}
+section.the_best_jhony_walker .col-lg-6:nth-child(even)>div{
+    max-width: 576px;
+}
+section.the_best_jhony_walker .col-lg-6:nth-child(odd)>div{
+    max-width: 600px;
+    padding-left: 5%;
+}
+section.the_best_jhony_walker .row{
+    gap: 48px 0;
+    align-items: center;
+}
+section.the_best_jhony_walker a{
+    color: var(--Yellow, #EBB035);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+}
+section.the_best_jhony_walker .content{
+    position: relative;
+    top: 50px;
+}
+section.the_best_jhony_walker h3{
+    margin-bottom:  20px;
+}
+
+
+
+
+
+
+
+section.why_you_should_but .content{
+    padding: 45px;
+    border-radius: 15px;
+    border: 1.5px solid #2B2929;
+    height: 100%;
+}
+section.why_you_should_but .content img{
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+section.why_you_should_but h3,
+section.why_you_should_but h2{
+    margin-bottom: 20px;
+}
+section.why_you_should_but .row{
+    gap: 24px 0;
+}
+section.why_you_should_but{
+    background-color: #F4F4F4;
+}
+section.why_you_should_but .header_content{
+    max-width: 787px;
+    margin: 0 auto 50px auto;
+}
+section.why_you_should_but .header h2,
+section.why_you_should_but .header p{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+section.why_choose_flasked_for_jhony_walker .bg{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/Add_the_Finest_Johnnie_Walker_for_sale_in_the_Philippines_to_Your_Flasked_Cart_today.png?v=1704270014')no-repeat center center/cover;
+    padding: 100px 30px;
+    border-radius: 15px;
+}
+section.why_choose_flasked_for_jhony_walker h2,
+section.why_choose_flasked_for_jhony_walker p{
+    text-align: center;
+    color: white;
+}
+section.why_choose_flasked_for_jhony_walker h2{
+    margin-bottom: 20px;
+}
+section.why_choose_flasked_for_jhony_walker .content{
+    max-width: 770px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+
+@media (max-width:991px) {
+    section.banner .left_content,
+    section.the_best_jhony_walker .col-lg-6:nth-child(odd)>div{
+        padding-left: 0;
+        max-width: 100%;
+    }
+    section.the_best_jhony_walker .col-lg-6:nth-child(2n)>div{
+        max-width: 100%;
+    }
+    section.the_best_jhony_walker .col-lg-6:nth-child(2n)>div img,
+    section.the_best_jhony_walker .col-lg-6:nth-child(odd)>div img{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:767px) {
+    section.banner .content{
+        padding: 0 30px;
+    }
+    section.banner .content *,
+    section.why_choose_flasked_for_jhony_walker .content *,
+    section.the_best_jhony_walker .header .content_header *,
+    section.why_you_should_but .header h2, 
+    section.why_you_should_but .header p{
+        text-align: left !important;
+    }
+    section.why_choose_flaske .row:first-child .content,
+    section.why_choose_flaske .row:first-child .content img{
+        max-width: 100%;
+        width: 100%;
+    }
+}

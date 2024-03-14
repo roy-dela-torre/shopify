@@ -1,0 +1,125 @@
+.fera-submitter-modal .fera-modal-dialog {
+    max-width: 744px;
+}
+
+
+.fera-modal-dialog span.fera-rating-input-star.fera-rating-input-star--starred {
+    padding: 0;
+    border: none;
+}
+
+
+.fera-modal-dialog b {
+    color: #9E9E9E;
+    background-color: #9E9E9E !important;
+}
+
+
+.fera-modal-dialog h1#modal-4-title {
+    color: #2B2929;
+
+    /* h3 */
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+
+.fera-modal-dialog label {
+    color: #2B2929;
+
+    /* h4 */
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fera-modal-dialog .fera-form-group.fera-submitter-productDisplay {
+    display: flex;
+    align-items: center;
+    gap: 0 35px;
+}
+
+
+.fera-modal-dialog .fera-submitter-form-product-thumbnail {
+    display: none;
+}
+
+.fera-modal-dialog h3.fera-submitter-form-product-title {
+    color: #EBB035;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    /* 100% */
+}
+
+input.fera-input::placeholder {
+    color: #2B2929;
+
+    /* Brand */
+    font-family: "DIN Next W1G", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    /* 168.75% */
+}
+
+.fera-modal-dialog input.fera-input {
+    padding: 16px 13px;
+    border-radius: 5px;
+    border: 1px solid rgba(43, 41, 41, 0.30);
+    background: #FFF;
+}
+
+.fera-modal-dialog textarea.fera-input {
+    padding: 16px 13px;
+    border-radius: 5px;
+    border: 1px solid rgba(43, 41, 41, 0.30);
+    background: #FFF;
+}
+
+.fera-modal-dialog textarea.fera-input::placeholder {
+    color: #2B2929;
+    font-family: "DIN Next W1G", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px;
+    /* 168.75% */
+}
+
+.fera-submitter-form-content.fera-submitter-form-content--open>div {
+    margin: 0;
+}
+
+.fera-submitter-form-content.fera-submitter-form-content--open {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.fera-modal-dialog button.fera-btn.fera-submit-btn.fera--clickable.fera-btn--primary.fera-btn--block {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #EBB035;
+    background: #EBB035;
+
+}
+
+.fera-modal-dialog span.fera-btn-text.fera-text {
+    color: var(--Text, #2B2929);
+    text-align: center;
+    font-family: 'Manrope',sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

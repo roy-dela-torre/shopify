@@ -1,0 +1,48 @@
+section.my_account div#nav-tab{
+    flex-direction: column;
+    border: none;
+}
+section.my_account button{
+    border: none !important;
+    text-align: left;
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope',sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 16px 19px;
+    border-radius: 7px;
+}
+section.my_account button.active{
+    background-color: #EBB035 !important;
+    color: white !important;
+}
+section.my_account{
+    background-color: #F1F1F1;
+}
+section.my_account nav{
+    padding: 21px 36px;
+    border-radius: 7px;
+    background: var(--Light, #FFF);
+}
+section.my_account .header{
+    margin-bottom: 75px;
+}
+section.my_account .tab_content{
+    border-radius: 7px;
+    background: var(--Light, #FFF);
+    padding: 26px 12px;
+    height: 100%;
+}
+section.my_account{}
+section.my_account{}
+section.my_account{}
+section.my_account{}
+section.my_account{}
+
+@media (max-width:991px) {
+    section.my_account nav{
+        margin-bottom: 50px;
+    }
+}

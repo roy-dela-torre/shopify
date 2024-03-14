@@ -1,0 +1,356 @@
+<section class="collection_all_new d-none" id="whisky">
+    <div class="container-fluid">
+        <div class="wrapper">
+            <div class="header">
+                <h2>Whisky</h2>
+            </div>
+            <div class="sorting">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Whisky
+                    </button>
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <ul class="dropdown-menu">
+                                <button class="nav-link active" id="all_collection_tab" data-bs-toggle="tab" data-bs-target="#all_collection" type="button" role="tab" aria-controls="all_collection" aria-selected="true">Whisky</button>
+                                <button class="nav-link" id="product_type_tab" data-bs-toggle="tab" data-bs-target="#product_type" type="button" role="tab" aria-controls="product_type" aria-selected="false">Product Type</button>
+                                <button class="nav-link" id="brand-tab" data-bs-toggle="tab" data-bs-target="#brand" type="button" role="tab" aria-controls="brand" aria-selected="false">Brand</button>
+                                <button class="nav-link" id="ascending_tab" data-bs-toggle="tab" data-bs-target="#ascending" type="button" role="tab" aria-controls="ascending" aria-selected="false">Alphabetically, A-Z</button>
+                                <button class="nav-link" id="descending_tab" data-bs-toggle="tab" data-bs-target="#descending" type="button" role="tab" aria-controls="descending" aria-selected="false">Alphabetically, Z-A</button>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="all_collection" role="tabpanel" aria-labelledby="all_collection_tab" tabindex="0">
+                  <div class="row justify-content-center">
+                      {% assign count = 0 %}
+                      {% assign custom_collections = 'ingle-malt-scotch-whisky,american-whiskey-price-philippines,rye,irish-scotch,canadian-scotch,mini-whisky,blended-scotch,japanese-scotch,canadian-scotch,taiwanese-scotch,johnnie-walker-sale-philippines,macallan-price-philippines,glenfiddich' | split: ',' %}
+                  
+                      {% for collection_handle in custom_collections %}
+                          {% assign collection = collections[collection_handle] %}
+                          {% assign count = count | plus: 1 %}
+                          <div class="col-lg-3 col-md-4 col-sm-6 col-12 collections_content" {% if count >= 9 %}style="display:none;"{% endif %}>
+                              <div class="product_content">
+                                  <a class="card__whole-link" href="{{ collection.url }}" title="{{ collection.title }}">
+                                      <div class="feauture_image">
+                                          <img src="{{ collection.featured_image.src | img_url: '480x480' }}" alt="{{ collection.title }}"
+                                              srcset="{{ collection.featured_image.src | img_url: '240x240' }} 240w, {{ collection.featured_image.src | img_url: '360x360' }} 360w, {{ collection.featured_image.src | img_url: '420x420' }} 420w, {{ collection.featured_image.src | img_url: '480x480' }} 480w, {{ collection.featured_image.src | img_url: '640x640' }} 640w, {{ collection.featured_image.src | img_url: '840x840' }} 840w, {{ collection.featured_image.src | img_url: '1080x1080' }} 1080w, {{ collection.featured_image.src | img_url: '1280x1280' }} 1280w"
+                                              class="img" width="1285" height="1285"
+                                              sizes="(max-width: 359px) calc(100vw - 20px), (max-width: 767px) calc((100vw - 50px) / 2), (max-width: 1023px) calc((100vw - 80) / 3), (max-width: 1280px) calc((100vw - 100px) / 4), 300px" loading="lazy" />
+                                      </div>
+                                      <div class="card__text gutter--small spacing--xsmall remove-empty-space">
+                                          <span class="text-line-height--medium">
+                                              <span class="product_title">{{ collection.title }}</span>
+                                          </span>
+                                      </div>
+                                  </a>
+                              </div>
+                          </div>
+                      {% endfor %}
+                  
+                      <div class="col-md-12">
+                          <div class="load_more mt-3 mb-3 mx-auto">
+                              <span>Load More</span>
+                          </div>
+                      </div>
+                  </div>
+                  
+                </div>
+                <div class="tab-pane fade" id="product_type" role="tabpanel" aria-labelledby="product_type_tab" tabindex="0">
+                    <div class="row justify-content-center">
+                        {% assign count = 0 %}
+                        {% assign custom_collections = 'ingle-malt-scotch-whisky,american-whiskey-price-philippines,rye,irish-scotch,canadian-scotch,mini-whisky,blended-scotch,japanese-scotch,canadian-scotch,taiwanese-scotch' | split: ',' %}
+                    
+                        {% for collection_handle in custom_collections %}
+                            {% assign collection = collections[collection_handle] %}
+                            {% assign count = count | plus: 1 %}
+                            {% unless collection_handle contains 'vendors?q=' %}
+                                <div class="col-lg-3 col-md-4 col-sm-6 col-12 collections_content" {% if count >= 9 %}style="display:none;"{% endif %}>
+                                    <div class="product_content">
+                                        <a class="card__whole-link" href="{{ collection.url }}" title="{{ collection.title }}">
+                                            <div class="feauture_image">
+                                                <img src="{{ collection.featured_image.src | img_url: '480x480' }}" alt="{{ collection.title }}"
+                                                    srcset="{{ collection.featured_image.src | img_url: '240x240' }} 240w, {{ collection.featured_image.src | img_url: '360x360' }} 360w, {{ collection.featured_image.src | img_url: '420x420' }} 420w, {{ collection.featured_image.src | img_url: '480x480' }} 480w, {{ collection.featured_image.src | img_url: '640x640' }} 640w, {{ collection.featured_image.src | img_url: '840x840' }} 840w, {{ collection.featured_image.src | img_url: '1080x1080' }} 1080w, {{ collection.featured_image.src | img_url: '1280x1280' }} 1280w"
+                                                    class="img" width="1285" height="1285"
+                                                    sizes="(max-width: 359px) calc(100vw - 20px), (max-width: 767px) calc((100vw - 50px) / 2), (max-width: 1023px) calc((100vw - 80) / 3), (max-width: 1280px) calc((100vw - 100px) / 4), 300px" loading="lazy" />
+                                            </div>
+                                            <div class="card__text gutter--small spacing--xsmall remove-empty-space">
+                                                <span class="text-line-height--medium">
+                                                    <span class="product_title">{{ collection.title }}</span>
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endunless %}
+                        {% endfor %}
+                    
+                        <div class="col-md-12">
+                            <div class="load_more mt-3 mb-3 mx-auto">
+                                <span>Load More</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+                <div class="tab-pane fade" id="brand" role="tabpanel" aria-labelledby="brand-tab" tabindex="0">
+                    <div class="row justify-content-center">
+                        {% assign count = 0 %}
+                        {% assign custom_collections = 'johnnie-walker-sale-philippines,macallan-price-philippines,glenfiddich' | split: ',' %}
+                    
+                        {% for collection_handle in custom_collections %}
+                            {% assign collection = collections[collection_handle] %}
+                            {% assign count = count | plus: 1 %}
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 collections_content" {% if count >= 9 %}style="display:none;"{% endif %}>
+                                <div class="product_content">
+                                    <a class="card__whole-link" href="{{ collection.url }}" title="{{ collection.title }}">
+                                        <div class="feauture_image">
+                                            <img src="{{ collection.featured_image.src | img_url: '480x480' }}" alt="{{ collection.title }}"
+                                                srcset="{{ collection.featured_image.src | img_url: '240x240' }} 240w, {{ collection.featured_image.src | img_url: '360x360' }} 360w, {{ collection.featured_image.src | img_url: '420x420' }} 420w, {{ collection.featured_image.src | img_url: '480x480' }} 480w, {{ collection.featured_image.src | img_url: '640x640' }} 640w, {{ collection.featured_image.src | img_url: '840x840' }} 840w, {{ collection.featured_image.src | img_url: '1080x1080' }} 1080w, {{ collection.featured_image.src | img_url: '1280x1280' }} 1280w"
+                                                class="img" width="1285" height="1285"
+                                                sizes="(max-width: 359px) calc(100vw - 20px), (max-width: 767px) calc((100vw - 50px) / 2), (max-width: 1023px) calc((100vw - 80) / 3), (max-width: 1280px) calc((100vw - 100px) / 4), 300px" loading="lazy" />
+                                        </div>
+                                        <div class="card__text gutter--small spacing--xsmall remove-empty-space">
+                                            <span class="text-line-height--medium">
+                                                <span class="product_title">{{ collection.title }}</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    
+                        <div class="col-md-12">
+                            <div class="load_more mt-3 mb-3 mx-auto">
+                                <span>Load More</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                </div>
+                <div class="tab-pane fade" id="ascending" role="tabpanel" aria-labelledby="ascending_tab" tabindex="0">
+                    <div class="row justify-content-center">
+                        {% assign count = 0 %}
+                        {% assign custom_collections = 'ingle-malt-scotch-whisky,american-whiskey-price-philippines,rye,irish-scotch,canadian-scotch,mini-whisky,blended-scotch,japanese-scotch,canadian-scotch,taiwanese-scotch,johnnie-walker-sale-philippines,macallan-price-philippines,glenfiddich' | split: ',' %}
+                        {% assign sorted_collections = custom_collections | sort %}
+                        {% for collection_handle in sorted_collections %}
+                        {% assign collection = collections[collection_handle] %}
+                        {% assign count = count | plus: 1 %}
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 collections_content" {% if count >= 9 %}style="display:none;"{% endif %}>
+                                <div class="product_content">
+                                    <a class="card__whole-link" href="{{ collection.url }}" title="{{ collection.title }}">
+                                        <div class="feauture_image">
+                                            {% if collection.featured_image %}
+                                            <img src="{{ collection.featured_image.src | img_url: '480x480' }}" alt="{{ collection.title }}"
+                                                srcset="{{ collection.featured_image.src | img_url: '240x240' }} 240w, {{ collection.featured_image.src | img_url: '360x360' }} 360w, {{ collection.featured_image.src | img_url: '420x420' }} 420w, {{ collection.featured_image.src | img_url: '480x480' }} 480w, {{ collection.featured_image.src | img_url: '640x640' }} 640w, {{ collection.featured_image.src | img_url: '840x840' }} 840w, {{ collection.featured_image.src | img_url: '1080x1080' }} 1080w, {{ collection.featured_image.src | img_url: '1280x1280' }} 1280w"
+                                                class="img" width="1285" height="1285"
+                                                sizes="(max-width: 359px) calc(100vw - 20px), (max-width: 767px) calc((100vw - 50px) / 2), (max-width: 1023px) calc((100vw - 80) / 3), (max-width: 1280px) calc((100vw - 100px) / 4), 300px" loading="lazy" />
+                                            {% else %}
+                                            <!-- Add a placeholder or default image if featured image is missing -->
+                                            <img src="/placeholder-image.jpg" alt="Placeholder Image" class="img" />
+                                            {% endif %}
+                                        </div>
+                                        <div class="card__text gutter--small spacing--xsmall remove-empty-space">
+                                            <span class="text-line-height--medium">
+                                                <span class="product_title">{{ collection.title }}</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    
+                        <div class="col-md-12">
+                            <div class="load_more mt-3 mb-3 mx-auto">
+                                <span>Load More</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="descending" role="tabpanel" aria-labelledby="descending_tab" tabindex="0">
+                    <div class="row justify-content-center">
+                        {% assign count = 0 %}
+                        {% assign custom_collections = 'ingle-malt-scotch-whisky,american-whiskey-price-philippines,rye,irish-scotch,canadian-scotch,mini-whisky,blended-scotch,japanese-scotch,canadian-scotch,taiwanese-scotch,johnnie-walker-sale-philippines,macallan-price-philippines,glenfiddich' | split: ',' %}
+                        {% assign sorted_collections = custom_collections | sort | reverse %}
+                        {% for collection_handle in sorted_collections %}
+                        {% assign collection = collections[collection_handle] %}
+                        {% assign count = count | plus: 1 %}
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 collections_content" {% if count >= 9 %}style="display:none;"{% endif %}>
+                                <div class="product_content">
+                                    <a class="card__whole-link" href="{{ collection.url }}" title="{{ collection.title }}">
+                                        <div class="feauture_image">
+                                            {% if collection.featured_image %}
+                                            <img src="{{ collection.featured_image.src | img_url: '480x480' }}" alt="{{ collection.title }}"
+                                                srcset="{{ collection.featured_image.src | img_url: '240x240' }} 240w, {{ collection.featured_image.src | img_url: '360x360' }} 360w, {{ collection.featured_image.src | img_url: '420x420' }} 420w, {{ collection.featured_image.src | img_url: '480x480' }} 480w, {{ collection.featured_image.src | img_url: '640x640' }} 640w, {{ collection.featured_image.src | img_url: '840x840' }} 840w, {{ collection.featured_image.src | img_url: '1080x1080' }} 1080w, {{ collection.featured_image.src | img_url: '1280x1280' }} 1280w"
+                                                class="img" width="1285" height="1285"
+                                                sizes="(max-width: 359px) calc(100vw - 20px), (max-width: 767px) calc((100vw - 50px) / 2), (max-width: 1023px) calc((100vw - 80) / 3), (max-width: 1280px) calc((100vw - 100px) / 4), 300px" loading="lazy" />
+                                            {% else %}
+                                            <!-- Add a placeholder or default image if featured image is missing -->
+                                            <img src="/placeholder-image.jpg" alt="Placeholder Image" class="img" />
+                                            {% endif %}
+                                        </div>
+                                        <div class="card__text gutter--small spacing--xsmall remove-empty-space">
+                                            <span class="text-line-height--medium">
+                                                <span class="product_title">{{ collection.title }}</span>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    
+                        <div class="col-md-12">
+                            <div class="load_more mt-3 mb-3 mx-auto">
+                                <span>Load More</span>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <section class="image d-none px-0">
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="image p-0">
+                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/dringking_for_everyone.jpg?v=1708909920" alt="" height="540" width="100">
+            </div>
+        </div>
+    </div>
+  </section>
+  <style>
+    .feauture_image img{
+        max-width: 298px;
+        height: 298px;
+        object-fit: cover;
+    }
+    .feauture_image img:hover {
+        transition: 1s ease all;
+        transform: scale(1.3);
+    }
+    .feauture_image{
+        padding: 0;
+        overflow: hidden;
+    }
+    .product_content{
+        border-radius: 15px;
+        border: 1px solid #F1F1F1;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .collection_all_new .row{
+        gap: 30px 0;
+    }
+    .load_more{
+        padding: 10px 20px;
+        color: var(--Text, #2B2929);
+        text-align: center;
+        font-family: 'Manrope',sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 7px;
+        border: 1px solid #EBB035;
+        background: #EBB035;
+        max-width: fit-content;
+        cursor: pointer;
+    }
+      a.card__whole-link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }
+      .collection_all_new .product_title{
+        color: #2B2929;
+        text-align: center;
+        font-family: 'Manrope',sans-serif;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: block;
+        width: 100%;
+    }
+    section.collection_all_new .dropdown button{
+        padding: 17px 18px;
+        border-radius: 5px;
+        border: 1px solid rgba(43, 41, 41, 0.30);
+        background: var(--Dark, #2B2929);
+        color: #FFF;
+        font-family: "DIN Next W1G",sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        position: relative;
+    }
+    ul.dropdown-menu.show{
+        max-width: 220px;
+        position: absolute;
+        inset: 0px auto auto 0px;
+        margin: 0px;
+        transform: translate3d(1071px, 65px, 0px);
+        width: 100%;
+        border-radius: 7px;
+        border: 1px solid rgba(43, 41, 41, 0.30);
+        background: var(--Dark, #2B2929);
+    }
+    div#nav-tab button {
+        padding: 10px;
+        color: #FFF;
+        font-family: "DIN Next W1G",sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px; /* 168.75% */
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    .dropdown{
+        display: flex;
+        justify-content: end;
+        position: relative;
+    }
+    section#whisky h2{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+      @media (max-width:991px) {
+        .feauture_image img{
+            max-width: 100%;
+            height: auto;
+        }
+    }
+  </style>
+  
+  
+  {% schema %}
+  {
+    "name": "Whisky All New",
+    "settings": [],
+    "presets": [
+      {
+        "name" : "Whisky All New"
+      }
+    ]
+  }
+  {% endschema %}
+  
+  {% stylesheet %}
+  
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}

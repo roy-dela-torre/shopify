@@ -1,0 +1,48 @@
+section.hot_deals .content{
+    min-height: 350px;
+    border-radius: 15px;
+}
+section.hot_deals .content.bundle_deals{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/BUNDLE_DEALS_165ea279-6b77-4713-8ec2-ea1463171a87.jpg?v=1709100408')no-repeat center center/cover;
+}
+section.hot_deals .content.voucher_ready{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/VOUCHER_READY.jpg?v=1709100408')no-repeat center center/cover;
+}
+section.hot_deals .content h3,
+section.hot_deals .content p{
+    color: white;
+}
+section.hot_deals .content .inner_content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: end;
+    align-items: start;
+    padding: 44px;
+    height: 100%;
+}
+section.hot_deals h3{
+    color: var(--Light, #FFF);
+    font-family: 'Manrope',sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38.4px; /* 96% */
+}
+section.hot_deals span{
+    color: var(--Light, #FFF);
+    font-family: 'Manrope',sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    margin-bottom: 9px;
+}
+section.hot_deals h2{
+    margin-bottom: 50px;
+}
+@media (max-width:991px) {
+    section.hot_deals .row>div:nth-child(2){
+        margin-bottom: 30px;
+    }
+}

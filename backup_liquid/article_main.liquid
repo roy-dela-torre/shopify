@@ -1,0 +1,165 @@
+<!-- Example: Displaying the template name -->
+{% comment %} Display template name {% endcomment %}
+{% assign template_name = template.name %}
+{% comment %} Carousel for Featured Blogs {% endcomment %}
+{% assign blog_handle = 'articles' %}
+<!-- Replace 'sample-blog' with your actual blog's handle -->
+<link rel="stylesheet" href="{{ 'blogs.css' | asset_url }}">
+<section class="banner"> 
+  <div class="container-fluid p-0">
+    <div class="wrapper">
+      <div class="row">
+        <h1 class="text-center">Articles</h1>
+        {% assign latest_article = blogs[blog_handle].articles.first %}
+        <div class="featured_content" style="background:  linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%),url('{{ latest_article.image.src | img_url: '1024x768' }}') no-repeat center center/cover">
+          <div class="main_content">
+            <span>Featured</span>
+              <h2>Flasked: {{ latest_article.title }}</h2>
+              <p>{{ latest_article.content | strip_html | truncatewords: 30 }}</p>
+              <a href="{{ latest_article.url }}" class="read-more" target="_blank">
+                <span>Read More</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12" fill="none">
+                  <path d="M7.34183 0.509061C7.2334 0.617313 7.14737 0.745884 7.08867 0.887418C7.02998 1.02895 6.99977 1.18067 6.99977 1.33389C6.99977 1.48712 7.02998 1.63883 7.08867 1.78037C7.14737 1.9219 7.2334 2.05047 7.34183 2.15873L10.017 4.83389H1.16667C0.857247 4.83389 0.560501 4.95681 0.341709 5.1756C0.122917 5.39439 0 5.69114 0 6.00056C0 6.30998 0.122917 6.60673 0.341709 6.82552C0.560501 7.04431 0.857247 7.16723 1.16667 7.16723H10.017L7.34183 9.84239C7.12307 10.0612 7.00018 10.3579 7.00018 10.6672C7.00018 10.9766 7.12307 11.2733 7.34183 11.4921C7.56059 11.7108 7.85729 11.8337 8.16667 11.8337C8.47604 11.8337 8.77274 11.7108 8.9915 11.4921L14.483 6.00056L8.9915 0.509061C8.88325 0.400624 8.75468 0.314596 8.61314 0.255901C8.47161 0.197205 8.31989 0.166992 8.16667 0.166992C8.01344 0.166992 7.86173 0.197205 7.72019 0.255901C7.57866 0.314596 7.45009 0.400624 7.34183 0.509061Z" fill="#EBB035"/>
+                </svg>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="more_article">
+  <div class="container-fluid">
+    <div class="wrapper">
+      <div class="row">
+        <div class="headers">
+          <h2 class="text-center">Other Articles</h2>
+        </div>
+        {%- assign first_article = true -%}
+        {%- paginate blogs[blog_handle].articles by 7 -%}
+          {%- for article in blogs[blog_handle].articles -%}
+            {%- if first_article -%}
+              {%- assign first_article = false -%}
+              {%- continue -%}
+            {%- endif -%}
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="content">
+                <img src="{{ article.image.src | img_url: '1024x768' }}" alt="{{ article.title }}" width="410" height="330" loading="eager">
+                <div class="post-content">
+                  <p class="date">{{ article.published_at | date: "%Y-%m-%d" }}</p>
+                  <h3>{{ article.title }}</h3>
+                  <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
+                </div>
+                <a href="{{ article.url }}" class="read-more" target="_blank">Read More</a>
+              </div>
+            </div>
+          {%- endfor -%}
+
+          {%- if paginate.pages > 1 -%}
+            <nav role="navigation">
+              <ol class="pagination">
+                {%- if paginate.previous -%}
+                  <li>
+                    <a href="{{ paginate.previous.url }}">
+                      <span class="visuallyhidden"><img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/left_arrow.png?v=1706597240" alt=""></span>
+                    </a>
+                  </li>
+                {%- else -%}
+                  <li class="disabled">
+                    <span class="visuallyhidden"><img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/left_arrow.png?v=1706597240" alt=""></span>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  {%- if part.is_link -%}
+                    <li>
+                      <a href="{{ part.url }}">
+                        <span class="visuallyhidden"></span>
+                        {{ part.title }}
+                      </a>
+                    </li>
+                  {%- else -%}
+                    {%- if part.title == paginate.current_page -%}
+                      <li class="active" aria-current="page">
+                        <span class="visuallyhidden"></span>
+                        {{ part.title }}
+                      </li>
+                    {%- else -%}
+                      <li>
+                        <span class="visuallyhidden"></span>
+                        {{ part.title }}
+                      </li>
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li>
+                    <a href="{{ paginate.next.url }}">
+                      <span class="visuallyhidden"><img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/right_arrow.png?v=1706597240" alt=""></span>
+                    </a>
+                  </li>
+                {%- else -%}
+                  <li class="disabled">
+                    <span class="visuallyhidden"><img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/right_arrow.png?v=1706597240" alt=""></span>
+                  </li>
+                {%- endif -%}
+              </ol>
+            </nav>
+          {%- endif -%}
+        {%- endpaginate -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% section 'footer' %}
+<script>
+  $(document).ready(function() {
+    $(".carousel-captions").height()
+    let previousWidth = $(window).width();
+
+// Function to update the displayed width
+    function updateViewportWidth() {
+      const viewportWidth = $(window).width();
+      $('#width').text(`Width: ${viewportWidth}px`);
+    }
+
+// Initial update of viewport width
+    updateViewportWidth();
+
+// Bind the resize event handler
+    $(window).on('resize', function() {
+      const currentWidth = $(window).width();
+      if (currentWidth !== previousWidth) {
+
+// Width has changed, update and print new width
+        updateViewportWidth();
+        previousWidth = currentWidth;
+      }
+    });
+  })
+</script>
+{% schema %}
+  {
+    "name": "Articles Main",
+    "settings": [],
+    "presets": [
+      {
+        "name" : "Articles Main"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,337 @@
+<div class="main_new_header">
+    <section class="yellowbar">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="row align-items-center">
+                    <div class="col-3">
+                        <div class="socmed">
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/email.png?v=1701673711" alt="email">
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/facebook.png?v=1701673711" alt="facebook">
+                            </a>
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/instagram.png?v=1701673711" alt="instagram">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="text">
+                            <p class="text-center">Free Shipping within Metro Manila! No Minimum Spend!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="search">
+        <div class="container-fluid">
+            <div class="wrapper">
+                <div class="row">
+                <button class="navbar-toggler" type="button" id="hamburger">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                    <div class="logo">
+                        <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/headerLogo.png?v=1701673711" width="" height="" alt="" id="logo">
+                    </div>
+                    <div class="search_icon"> 
+                        <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/searchMobile.png?v=1702361483" width="" height="" alt="" id="logo">
+                    </div>
+                    <div class="drawer" id="navbarNav">
+                    <div class="logo d-flex d-xl-none justify-content-between align-items-center mw-100"> 
+                            <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/headerLogo.png?v=1701673711" width="" height="" alt="">
+                            <button class="navbar-toggler" id="close">
+                            <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/close.png?v=1702353053" width="" height="" alt="" class="close">
+                            </button>
+                    </div>
+                    {% if linklists['new-header'] %}
+                        {% assign count = 0 %}
+                        <ul class="navbar-nav">
+                            {% for link in linklists['new-header'].links %}
+                                {% assign count = count | plus: 1 %}
+                                {% assign product_type_key = link.title | append: '-product-type' %}
+                                {% assign top_brands_key = link.title | append: '-top-brands' %}
+                                <li class="{{ link.title | downcase | replace: ' ', '_' | replace: '&', 'and' }}">
+                                    <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                    {% if link.links and link.links.size > 0 %}  
+                                        {% if count >= 4 and count <= 9 %}
+                                            <ul class="{{ link.title | downcase | replace: ' ', '_' | replace: '&', 'and' }}">
+                                                <span class="back d-flex gx-1 align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
+                                                        <g clip-path="url(#clip0_464_25430)">
+                                                        <path d="M5.93555 1.6855L1.07255 6.55L0.0112965 5.48875L4.87505 0.625L5.93555 1.6855Z" fill="#2B2929" fill-opacity="0.8"/>
+                                                        <path d="M4.86333 10.3645L-0.000422047 5.5007L1.06008 4.43945L5.92383 9.30395L4.86333 10.3645Z" fill="#2B2929" fill-opacity="0.8"/>
+                                                        </g>
+                                                        <defs>
+                                                        <clipPath id="clip0_464_25430">
+                                                            <rect width="9.75" height="6" fill="white" transform="translate(6 0.625) rotate(90)"/>
+                                                        </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Back
+                                                </span>
+                                                {% if count == 8 %}
+                                                    <div class="{{ link.title }}_product_type">
+                                                        <h4>PRODUCT TYPE</h4>
+                                                        {% for link in linklists['beers-cocktails_top_brands'].links %}
+                                                            <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                                        {% endfor %}
+                                                    </div>
+                                                    <div class="{{ link.title }}_top_brands">
+                                                        <h4>TOP BRANDS</h4>
+                                                        {% for link in linklists['beers_and_cocktails-top-brands'].links %}
+                                                            <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                                        {% endfor %}
+                                                    </div>
+                                                {% else %}
+                                                    <div class="{{ link.title }}_product_type">
+                                                        <h4>PRODUCT TYPE</h4>
+                                                        {% for link in linklists[product_type_key].links %}
+                                                            <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                                        {% endfor %}
+                                                    </div>
+                                                    <div class="{{ link.title }}_top_brands">
+                                                        <h4>TOP BRANDS</h4>
+                                                        {% for link in linklists[top_brands_key].links %}
+                                                            <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                                        {% endfor %}
+                                                    </div>
+                                                {% endif %}
+                                            </ul>
+                                            <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/left.png?v=1702365127" width="" height="" alt="">
+                                        {% else %} 
+                                            <ul class="{{ link.title | downcase | replace: ' ', '_' | replace: '&', 'and' }}">
+                                                <span class="back d-flex gx-1 align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="6" height="11" viewBox="0 0 6 11" fill="none">
+                                                        <g clip-path="url(#clip0_464_25430)">
+                                                        <path d="M5.93555 1.6855L1.07255 6.55L0.0112965 5.48875L4.87505 0.625L5.93555 1.6855Z" fill="#2B2929" fill-opacity="0.8"/>
+                                                        <path d="M4.86333 10.3645L-0.000422047 5.5007L1.06008 4.43945L5.92383 9.30395L4.86333 10.3645Z" fill="#2B2929" fill-opacity="0.8"/>
+                                                        </g>
+                                                        <defs>
+                                                        <clipPath id="clip0_464_25430">
+                                                            <rect width="9.75" height="6" fill="white" transform="translate(6 0.625) rotate(90)"/>
+                                                        </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                    Back
+                                                </span>
+                                                {% for sublink in link.links %}
+                                                    <li><a href="{{ sublink.url }}" target="_blank" rel="noopener noreferrer">{{ sublink.title }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                            <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/left.png?v=1702365127" width="" height="" alt="">
+                                        {% endif %}
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+
+                    </div>
+                    <div class="searchForm">
+                        <search-form data-resource-type="product,collection{% if settings.predictive_search_include_pages %},page{% endif %}{% if settings.predictive_search_include_articles %},article{% endif %}" style="position:relative">
+                            <div class="button button--outline button--icon button--outline-hover button--no-padding button--no-hover site-search-handle">
+                            <span class="button__icon" role="img" aria-hidden="true">{%- render 'theme-symbols', icon: 'search' -%}</span>
+                            <form action="{{ routes.search_url }}" method="get" role="search" autocomplete="off">
+                                <input name="q" type="search" autocomplete="off" 
+                                placeholder="{{ 'search.form.placeholder' | t }}" 
+                                aria-label="{{ 'search.form.placeholder' | t }}"
+                                {% if settings.predictive_search_enabled %} 
+                                    data-js-search-input
+                                    data-js-focus-overlay="search-results-overlay-desktop"
+                                {% endif %}
+                                />
+                                <input type="hidden" name="options[prefix]" value="last" />
+                                <input type="hidden" name="type" value="product{% if settings.predictive_search_include_articles %},article{% endif %}{% if settings.predictive_search_include_pages %},page{% endif %}" />
+                                <button type="submit" style="display:none">{{ 'search.form.submit' | t }}</button>
+                            </form>
+                            </div>
+                            {% if settings.predictive_search_enabled %} 
+                            <div class="search-results-overlay" id="search-results-overlay-desktop" onclick="this.classList.remove('active')" style="display:none"></div>
+                            <div class="search-results-container" data-js-search-results></div> 
+                            {% endif %}
+                        </search-form>
+                    </div>
+                    <div class="group-button d-none d-xl-flex">
+                        <div class="cart">
+                            <a href="{{ routes.cart_url }}" target="_blank" rel="noopener noreferrer" 
+                            {% if settings.cart_action == 'overlay' and template != 'cart' %} 
+                                data-js-sidebar-handle aria-expanded="false" aria-controls="site-cart-sidebar" role="button"
+                            {% else %}
+                                href="{{ routes.cart_url }}"
+                                {% endif %}>
+                                    <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/cart.png?v=1701673711" width="" height="" alt="">
+                                    <span data-header-cart-total aria-hidden="true" class="totle_price d-none">{{ cart.total_price | money }}</span>
+                                    <span data-header-cart-count aria-hidden="true" class="item_count">{{ cart.item_count }}</span>
+                            </a>
+                            <div class="cart_show">
+                                <div class="loading-indicator" style="display: none;"></div>
+                                <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.5 0L0.808657 11.25H24.1913L12.5 0Z" fill="white"></path>
+                                </svg>
+                                <div class="cart_section">
+                                   
+                                </div>
+                                <div class="group_button">
+                                    <div class="subtotal">
+                                        <h3>Subtotal</h3>
+                                        <h3 class="subtotal_price">₱14,330.00</h3>
+                                    </div>
+                                    <div class="bottom_button">
+                                        <a href="https://www.flasked.ph/cart" target="_blank" rel="noopener noreferrer" class="view_cart">View Cart</a>
+                                        <a href="https://www.flasked.ph/checkout" target="_blank" rel="noopener noreferrer" class="checkout">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="account">
+                            {%- if shop.customer_accounts_enabled -%}
+                                {%- if customer -%}
+                                  <a class="my_account" href="{{ routes.account_url }}">
+                                {%- else -%}
+                                  <a class="log_in" href="{{ routes.account_login_url }}">
+                                {%- endif -%}
+                                <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/user.png?v=1701673712" width="" height="" alt="">
+                                  {% comment %} {{ 'general.breadcrumb.account' | t }} {% endcomment %}
+                                </a>
+                              {%- endif -%}
+                            
+                              {% if customer %}
+                                <p><a href="{{ routes.account_url }}" target="_blank" rel="noopener noreferrer">My Account</a> | <a href="{/my-account/logout" target="_blank" rel="noopener noreferrer">Log Out</a></p>
+                              {% else %}
+                                <p><a href="{{ routes.account_login_url }}" target="_blank" rel="noopener noreferrer">Login</a> | <a href="/account/register" target="_blank" rel="noopener noreferrer">Sign Up</a></p>
+                              {% endif %}
+                              
+                        </div>
+                    </div>
+                    <div class="header-actions header-actions--blocks d-none d-xl-block" data-js-header-actions="">
+                        <div class="header-info-block" data-type="info">
+                            <div class="header-info-block__image">
+                                <svg height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg"><g style="fill:none;stroke:#202020;stroke-miterlimit:10;stroke-width:2;stroke-linejoin:round;stroke-linecap:round"><path d="m17 15h26c2.3 0 2.1 1.6 1.7 3.1s-3.7 14.9-3.7 14.9h10.1l4-2 3.9 2v8c0 1.3-.5 2-2 2h-8m-40 0h6.6m9.4 0h14.6"></path><path d="m43.6 23h5.4l6.1 8m-24.1-8h-22m18 8h-22"></path><path d="m24.8 44a6.9 6.9 0 0 1 -6.2 5c-2.7 0-4.2-2.2-3.4-5a6.9 6.9 0 0 1 6.2-5c2.6 0 4.2 2.2 3.4 5zm24 0a6.9 6.9 0 0 1 -6.2 5c-2.7 0-4.2-2.2-3.4-5a6.9 6.9 0 0 1 6.2-5c2.6 0 4.2 2.2 3.4 5z"></path></g></svg></div><div class="header-info-block__text"><span class="header-info-block__caption text-size--xsmall">Straight to your home</span><span class="header-info-block__title">
+                                <span class="">Nationwide Delivery</span>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-xl bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse d-none d-xl-block" id="navbarNav">
+            {% if linklists['new-header'] %}
+                <ul class="navbar-nav">
+                {% assign count = 0 %}
+                {% for link in linklists['new-header'].links %}
+                    {% assign count = count | plus: 1 %}
+                    {% assign product_type_key = link.title | append: '-product-type' %}
+                    {% assign top_brands_key = link.title | append: '-top-brands' %}
+                    <li class="{{ link.title | downcase | replace: ' ', '_' | replace: '&', 'and' }}">
+                        <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                        {% if link.links and link.links.size > 0 %}   
+                            <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/dropdownArrow_9546cb74-a16c-4246-ba30-c2601cb9221c.png?v=1702539340" width="" height="" alt="">
+                            {% if count >= 4 and count <= 9 %}
+                                <ul class="{{ link.title | downcase | replace: ' ', '_' | replace: '&', 'and' }}">
+                                    {% if count == 8 %}
+                                        <div class="{{ link.title }}_product_type">
+                                            <h4>PRODUCT TYPE</h4>
+                                            {% for link in linklists['beers-cocktails_top_brands'].links %}
+                                                <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="{{ link.title }}_top_brands">
+                                            <h4>TOP BRANDS</h4>
+                                            {% for link in linklists['beers_and_cocktails-top-brands'].links %}
+                                                <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    {% else %}
+                                        <div class="{{ link.title }}_product_type">
+                                            <h4>PRODUCT TYPE</h4>
+                                            {% for link in linklists[product_type_key].links %}
+                                                <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="{{ link.title }}_top_brands">
+                                            <h4>TOP BRANDS</h4>
+                                            {% for link in linklists[top_brands_key].links %}
+                                                <a href="{{ link.url }}"  target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    {% endif %}
+                                </ul>
+                            {% else %}
+                                <ul class="{{ link.title | downcase | replace: ' ', '_' | replace: '&', 'and' }}">
+                                    {% for sublink in link.links %}
+                                        <li><a href="{{ sublink.url }}" target="_blank" rel="noopener noreferrer">{{ sublink.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            </div>
+            <div class="group-button d-flex d-xl-none">
+                <div class="cart">
+                    <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/cart.png?v=1701673711" width="" height="" alt="">
+                    <span data-header-cart-total aria-hidden="true" class="totle_price d-none">{{ cart.total_price | money }}</span>
+                    <span data-header-cart-count aria-hidden="true" class="item_count">{{ cart.item_count }}</span>
+                    <div class="cart_show">
+                        <div class="loading-indicator" style="display: none;"></div>
+                        <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.5 0L0.808657 11.25H24.1913L12.5 0Z" fill="white"></path>
+                        </svg>
+                        <div class="cart_section">
+                            
+                        </div>
+                        <div class="group_button">
+                            <div class="subtotal">
+                                <h3>Subtotal</h3>
+                                <h3 class="subtotal_price">₱14,330.00</h3>
+                            </div>
+                            <div class="bottom_button">
+                                <a href="https://www.flasked.ph/cart" target="_blank" rel="noopener noreferrer" class="view_cart">View Cart</a>
+                                <a href="https://www.flasked.ph/checkout" target="_blank" rel="noopener noreferrer" class="checkout">Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account">
+                    <img src="https://cdn.shopify.com/s/files/1/0559/8553/7202/files/user.png?v=1701673712" width="" height="" alt="">
+                    <p><a href="http://" target="_blank" rel="noopener noreferrer">Login</a> | <a href="http://" target="_blank" rel="noopener noreferrer">Sign Up</a></p>
+                </div>
+            </div>
+            <div class="header-actions header-actions--blocks d-block d-xl-none" data-js-header-actions="">
+                <div class="header-info-block" data-type="info">
+                    <div class="header-info-block__image">
+                        <svg height="64" viewBox="0 0 64 64" width="64" xmlns="http://www.w3.org/2000/svg"><g style="fill:none;stroke:#202020;stroke-miterlimit:10;stroke-width:2;stroke-linejoin:round;stroke-linecap:round"><path d="m17 15h26c2.3 0 2.1 1.6 1.7 3.1s-3.7 14.9-3.7 14.9h10.1l4-2 3.9 2v8c0 1.3-.5 2-2 2h-8m-40 0h6.6m9.4 0h14.6"></path><path d="m43.6 23h5.4l6.1 8m-24.1-8h-22m18 8h-22"></path><path d="m24.8 44a6.9 6.9 0 0 1 -6.2 5c-2.7 0-4.2-2.2-3.4-5a6.9 6.9 0 0 1 6.2-5c2.6 0 4.2 2.2 3.4 5zm24 0a6.9 6.9 0 0 1 -6.2 5c-2.7 0-4.2-2.2-3.4-5a6.9 6.9 0 0 1 6.2-5c2.6 0 4.2 2.2 3.4 5z"></path></g></svg></div><div class="header-info-block__text"><span class="header-info-block__caption text-size--xsmall">Straight to your home</span>
+                        <span class="header-info-block__title">
+                            Nationwide Delivery
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+{% schema %}
+{
+    "name": "Header New",
+    "settings": [],
+    "presets": [
+    {
+        "name" : "Header New"
+    }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

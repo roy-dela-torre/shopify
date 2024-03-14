@@ -1,0 +1,74 @@
+section.shopify-section{
+    padding: 0 !important;
+}
+section.contact_us input[type="text"],
+section.contact_us input[type="email"],
+section.contact_us textarea{
+    border-radius: 5px;
+    border: 1px solid rgba(43, 41, 41, 0.30);
+    background: #FFF;
+    padding: 16px 13px;
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 156.25% */
+    width: 100%;
+}
+section.contact_us .contact_us_form form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+section.contact_us input[type="text"]::placeholder,
+section.contact_us input[type="email"]::placeholder,
+section.contact_us textarea::placeholder{
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope',sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 156.25% */    
+}
+section.contact_us textarea{
+    max-height: 228px;
+}
+section.contact_us form button{
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #EBB035;
+    background: #EBB035;
+    color: var(--Text, #2B2929);
+    text-align: center;
+    font-family: 'Manrope',sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+section.contact_us .contact_form_content{
+    max-width: 633px;
+    padding: 100px 0;
+    margin: 0 5% 0 auto
+}
+section.contact_us h2{
+    margin-bottom: 30px;
+}
+@media (max-width:1200px) {
+    section.contact_us{
+        padding: 70px 30px !important;
+    }
+}
+@media (max-width:991px) {
+    section.contact_us .contact_form_content{
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width:767px) {
+    section.contact_us{
+        padding: 50px 20px !important;
+    }
+}

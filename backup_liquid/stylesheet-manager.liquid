@@ -1,0 +1,69 @@
+{% if page.url == '/' %}
+  {% elsif page.url == '/pages/new-homepage' %}
+    <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'global.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'index.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'owl.carousel.min.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'owl.theme.default.min.css' | asset_url }}">
+  {% elsif '/collections/all-products' contains page.url %}
+    <link rel="stylesheet" href="{{ 'collection-all-products.css' | asset_url }}">
+  {% elsif '/pages/about-us-new' contains page.url %}
+    <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'global.css' | asset_url }}">
+  {% elsif '/pages/collection-all-new' contains page.url %}
+    <link rel="stylesheet" href="{{ 'bootstrap.min.css' | asset_url }}">
+    <link rel="stylesheet" href="{{ 'global.css' | asset_url }}">
+  {% elsif template == 'product' and request.path == '/products/testing-product' %}
+    <link rel="stylesheet" href="{{ 'single_product.css' | asset_url }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('div#shopify-block-0d317a42-4873-4348-8269-2e2bc9740e7c').hide();
+        function reloadWithVariant(variantId) {
+          var url = window.location.href.includes('variant=')
+            ? window.location.href.replace(/variant=\d+/, 'variant=' + variantId)
+            : window.location.href + (window.location.href.includes('?') ? '&' : '?') + 'variant=' + variantId;
+          window.location.href = url;
+        }
+        var variantIds = [];
+        meta.product.variants.forEach(function (variant) {
+          variantIds.push(variant.id);
+        });
+        console.log(variantIds);
+        if (variantIds.length == 2) {
+          $(
+            '<div class="group_button d-none">' +
+              '<button class="engraving">Engraving</button>' +
+              '<button class="bottle_only">Bottle Only</button>' +
+              '</div>'
+          ).insertAfter('div#shopify-block-0d317a42-4873-4348-8269-2e2bc9740e7c');
+        }
+        $('.bottle_only').on('click', function () {
+          reloadWithVariant(variantIds[0]);
+        });
+  
+        $('.engraving').on('click', function () {
+          reloadWithVariant(variantIds[1]);
+        });
+      });
+    </script>
+  {% endif %}
+  
+  {% schema %}
+  {
+    "name": "Stylesheet Manager",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Stylesheet Manager"
+      }
+    ]
+  }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
+  

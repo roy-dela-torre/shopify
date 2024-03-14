@@ -1,0 +1,52 @@
+.tr.orders {}
+
+main.gutter-bottom--regular .thead {
+    padding: 30px;
+    border-radius: 15px 15px 0px 0px;
+    background: var(--Dark, #2B2929);
+    height: auto;
+}
+
+main.gutter-bottom--regular {}
+
+main.gutter-bottom--regular span.th {
+    color: var(--Light, #FFF);
+    text-align: center;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h1.h2.gutter-bottom--small {
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope',sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57px; /* 135.714% */
+}
+
+a.button.button--outline.button--small {
+    padding: 16px 19px;
+    border-radius: 7px;
+    background: var(--Yellow, #EBB035);
+    border: none;
+}
+
+.account-widget__head {
+    padding: 18px 47px;
+    border-radius: 15px 15px 0px 0px;
+    background: var(--Dark, #2B2929);
+}
+
+
+.account-widget span {
+    color: var(--Light, #FFF);
+    font-family: 'Manrope',sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

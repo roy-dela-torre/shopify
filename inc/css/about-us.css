@@ -1,0 +1,142 @@
+section.banner img {
+    min-height: 540px;
+    object-fit: cover;
+}
+
+section.about_us .content {
+    padding-left: 5%;
+    max-width: 636px;
+}
+
+section.about_us .image {
+    max-width: 602px;
+}
+
+section.about_us h2 {
+    margin-bottom: 30px;
+}
+
+
+section.about_us .content img {
+    margin-bottom: 30px;
+}
+
+section.since_2019 span{
+    color: var(--Light, #FFF);
+    font-family: 'Manrope',sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 36px; /* 112.5% */
+}
+
+
+section.since_2019 img{
+    max-width: 70px;
+    object-fit: contain;
+}
+
+section.since_2019{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/since_2019_bg.jpg?v=1707723102')no-repeat center center/cover;
+}
+
+section.since_2019 .left_content{
+    max-width: 586px;
+}
+
+section.since_2019 .right_content{
+    padding-left: 5%;
+    max-width: 468px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+}
+section.since_2019 .row{
+    gap: 30px 0;
+}
+section.since_2019 .right_content .d-flex{
+    gap: 0 30px;
+}
+
+
+
+section.featured_brands .right_content .d-flex p{
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+
+section.featured_brands .logo{
+    width: calc(25% - 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.featured_brands .group_logo{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px 40px;
+}
+section.featured_brands h2{
+    margin-bottom: 50px;
+}
+section.featured_brands img{
+    max-width: 231px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1366px) {
+    section.banner img {
+        object-position: top;
+        min-height: 500px;
+    }
+    section.featured_brands .logo{
+        width: calc(33.33% - 14px);
+    }
+    section.featured_brands .group_logo{
+        gap: 20px;
+    }
+}
+@media (max-width:991px) {
+    section.since_2019{
+        background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/since_2019_bg.jpg?v=1707723102')no-repeat left center/cover;
+    }
+    section.banner img{
+        min-height: 300px;
+    }
+}
+@media (max-width: 767px) {
+    section.featured_brands .logo{
+        width: calc(50% - 10px);
+    }
+    section.featured_brands .group_logo{
+        gap: 20px;
+    }   
+    section.banner img{
+        min-height: 250px;
+    }
+}
+@media (max-width:575px) {
+    section.featured_brands .logo{
+        width: 100%;
+    }
+    section.banner img{
+        min-height: 200px;
+    }
+}
+@media (max-width:420px) {
+    section.banner img{
+        min-height: 150px;
+    }
+}

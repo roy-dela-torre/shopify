@@ -1,0 +1,42 @@
+h1.title.h2.gutter-bottom--page {
+    color: var(--Dark, #2B2929);
+    font-family: 'Manrope', sans-serif;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 57px;
+    /* 135.714% */
+    margin-bottom: 50px;
+}
+
+.container--large.container--vertical-space {
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.breadcrumb-main {
+    top: 0;
+    padding: 50px 0;
+}
+
+.breadcrumb-container {
+    padding: 0;
+}
+
+.cart-holder.cart-block.element--has-border--body.element--border-radius.element--no-border-on-small.margin-bottom--regular {
+    margin-bottom: 0;
+    border-left: 3px solid #EBB035;
+}
+
+button#CheckOut {
+    border-radius: 7px;
+    border: 1px solid #EBB035;
+    background: #EBB035;
+    color: var(--Text, #2B2929);
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}

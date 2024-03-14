@@ -1,0 +1,159 @@
+section.banner .bg{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/whiysky_philippines_banner.jpg?v=1702957055')no-repeat center center/cover;
+    padding: 119px 0;
+    border-radius: 15px;
+    margin-bottom: 127px;
+}
+section.banner .content{
+    max-width: 718px;
+    margin: 0 auto;
+}
+section.banner .bg h1,
+section.banner .bg p{
+    color: #FFFFFF;
+    text-align: center;
+}
+section.banner h1{
+    margin-bottom: 30px;
+}
+section.banner .img{
+    max-width: 732px;
+}
+section.banner .left_content{
+    max-width: 576px;
+    padding-left: 5%;
+}
+section.banner .row{
+    align-items: center;
+}
+section.banner h2{
+    margin-bottom: 20px;
+}
+section.banner .left_content img{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+section.top_whisky_brand{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/top_whisky_brand_bg.jpg?v=1702957056')no-repeat center center/cover;
+}
+section.top_whisky_brand .header .content_header{
+    max-width: 803px;
+}
+section.top_whisky_brand .col-lg-6:nth-child(even)>div{
+    max-width: 576px;
+}
+section.top_whisky_brand .col-lg-6:nth-child(odd)>div{
+    max-width: 600px;
+    padding-left: 5%;
+}
+section.top_whisky_brand .row{
+    gap: 48px 0;
+    align-items: center;
+}
+section.top_whisky_brand a{
+    color: var(--Yellow, #EBB035);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+
+
+
+section.best_time_to_drink img{
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+
+section.best_time_to_drink h3,
+section.why_can_you_get_whisky .row:last-child h3{
+    margin-bottom: 20px;
+}
+section.best_time_to_drink .content,
+section.why_can_you_get_whisky .content{
+    padding: 45px;
+    border-radius: 15px;
+    border: 1.5px solid #2B2929;
+    height: 100%;
+}
+section.best_time_to_drink .header .header_content{
+    max-width: 787px;
+    margin: 0 auto 26px auto;
+}
+section.best_time_to_drink .row{
+    gap: 24px 0;
+}
+section.best_time_to_drink h2,
+section.why_can_you_get_whisky h2{
+    margin-bottom: 20px;
+}
+
+
+
+section.why_can_you_get_whisky .row:first-child{
+    align-items: center;
+    margin-bottom: 50px;
+}
+section.why_can_you_get_whisky .row:last-child{
+    gap: 24px 0;
+}
+section.why_can_you_get_whisky .row:last-child img{
+    max-width: 50px;
+    margin-bottom: 15px;
+}
+section.why_can_you_get_whisky{
+    background-color: #F4F4F4;
+}
+
+
+
+section.add_the_best_whisky .bg{
+    background: url('https://cdn.shopify.com/s/files/1/0559/8553/7202/files/Add_the_Best_Whisky_for_Sale_in_the_Philippinesto_Your_Cart_at_Flasked.jpg?v=1702957054')no-repeat center center/cover;
+    padding: 108px;
+    border-radius: 15px;
+}
+section.add_the_best_whisky .content{
+    max-width: 672px;
+    margin: 0 auto;
+}
+section.add_the_best_whisky h2,
+section.add_the_best_whisky p{
+    color: white;
+}
+section.add_the_best_whisky h2{
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width:1200px) {
+    section.banner .bg{
+        margin-bottom: 70px;
+    }
+}
+
+@media (max-width:991px) {
+    section.banner .left_content,
+    section.top_whisky_brand .col-lg-6>div{
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    section.top_whisky_brand .col-lg-6>div img{
+        max-width: 80%;
+        margin: 0 auto 30px auto;
+        background-color: white;
+    }
+}
+@media (max-width:575px) {
+    section.top_whisky_brand .col-lg-6>div img{
+        max-width: 100%;
+    }
+}
+
+
